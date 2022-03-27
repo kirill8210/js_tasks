@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df3f60fe-1ba2-4196-b22c-46174418ee35" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="25saQlw0uYEhx6evvS3bpiSaKXh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df3f60fe-1ba2-4196-b22c-46174418ee35" name="Default Changelist" comment="" />
+      <created>1646318233482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646318233482</updated>
+      <workItem from="1646318234771" duration="5297000" />
+      <workItem from="1646379508368" duration="20078000" />
+      <workItem from="1646467740336" duration="24404000" />
+      <workItem from="1646557412193" duration="11526000" />
+      <workItem from="1646645766530" duration="8405000" />
+      <workItem from="1646728415785" duration="8801000" />
+      <workItem from="1646819280500" duration="5979000" />
+      <workItem from="1646839166615" duration="3560000" />
+      <workItem from="1646896510253" duration="834000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1219" y="246" key="FileChooserDialogImpl" timestamp="1646897711049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1219" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1646897711049" />
+    <state x="922" y="133" key="SettingsEditor" timestamp="1646729643856">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="133" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1646729643856" />
+    <state x="1095" y="228" key="run.anything.popup" timestamp="1646731573737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1095" y="228" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1646731573737" />
+  </component>
+</project>

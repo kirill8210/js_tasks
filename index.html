@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="wrapper theme-bright">
+    <p class="switch">Dark</p>
+</div>
+<div class="apps">
+    <p>1. Палиндром. Являются ли значение палиндромом'
+        'возвращает true или false'
+        'palindrome('racecar');'
+        'palindrome('table');'
+        'palindrome('Анна');'
+        'palindrome('А роза упала на лапу Азора');</p>
+    <div>
+        function palindrome(str){<br>
+        str = str.toLowerCase().replace(/\s/g, '');<br>
+        return str === str.split('').reverse().join('');<br>
+        }<br><br>
+
+        function palindrome1(str){<br>
+        const length = Math.floor(str.length / 2);<br>
+        str = str.toLowerCase().replace(/\s/g, '');<br>
+        for (let i = 0; i < length; i++)<br>
+        if (str[i] !== str[str.length - i - 1]){<br>
+        return false<br>
+        }<br>
+        return true<br>
+        }<br>
+    </div>
+    <div>
+        console.log('task1: ' + palindrome('racecar')); //true<br>
+        console.log('task1: ' + palindrome('table')); //false<br>
+        console.log('task1: ' + palindrome1('Анна')); //true<br>
+        console.log('task1: ' + palindrome1('А роза упала на лапу Азора')); //true
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        2. Find vowels. Создать функцию, которая возвращает количество гласных.<br><br>
+
+        console.log('task2: ' + findVowers('hello')); //2<br>
+        console.log('task2: ' + findVowers('why')); //0<br>
+    </p>
+    <div>
+        function findVowers(str){<br>
+        let count = 0;<br>
+        const vowels = ['a', 'e', 'i', 'o', 'u'];<br><br>
+
+        for (let char of str.toLowerCase()){<br>
+        if (vowels.includes(char)){<br>
+        count += 1;<br>
+        }<br>
+        }<br>
+        return count;<br>
+        }<br><br>
+
+        function findVowers2(str){<br>
+        const matched = str.match(/[aeiou]/gi);<br>
+        return matched ? matched.length : 0;<br>
+        }<br>
+    </div>
+    <div>
+        console.log('task2: ' + findVowers('hello')); //2<br>
+        console.log('task2: ' + findVowers2('why')); //0<br>
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        3. FizzBuzz. Создать функцию, которая возвращает числа по символам.
+        Если число делится на 3 то выводим fizz.
+        Если число делится на 5 то выводим buzz.
+        Если число делится на 3 и 5 то выводим fizzbuzz.<br><br>
+
+        //1 2 fizz 4 buzz fizz 7 8
+    </p>
+    <div>
+        function fizzBuzz(num){<br>
+        let arr = [];<br>
+        for (let i = 1; i <= num; i++){<br>
+        if (i % 3 === 0 && i % 5 === 0){<br>
+        arr.push('fizzbuzz')<br>
+        }<br>
+        else if (i % 3 === 0){<br>
+        arr.push('fizz')<br>
+        }<br>
+        else if (i % 5 === 0){<br>
+        arr.push('buzz')<br>
+        }<br>
+        else{<br>
+        arr.push(i)<br>
+        }<br>
+        }<br>
+        return console.log('task3: ' + arr);<br>
+        }<br>
+    </div>
+    <div>
+        fizzBuzz(8); //1 2 fizz 4 buzz fizz 7 8
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        4. Anagram. Написать функцию, которая будет проверять является ли 2 строки анаграммой.
+        Анограмма содержание одинаковых символов в разном порядке<br><br>
+
+        anagram(friend, Finder);  // true<br>
+        anagram('hello', 'world');  //false
+    </p>
+    <div>
+        function buildCharObject(str) {<br>
+        const charObj = {};<br>
+        str = str.toLowerCase().replace(/[^\w]/g);<br>
+        for (let char of str){<br>
+        charObj[char] = charObj[char] + 1 || 1;<br>
+        }<br>
+        return charObj;<br>
+        }<br><br>
+
+        function anagram(a, b){<br>
+        const aCharObj = buildCharObject(a);<br>
+        const bCharObj = buildCharObject(b);<br><br>
+
+        if (Object.keys(aCharObj).length !== Object.keys(bCharObj).length){<br>
+        return false;<br>
+        }<br>
+        for (let char in aCharObj){<br>
+        if (aCharObj[char] !== bCharObj[char]){<br>
+        return false;<br>
+        }<br>
+        }<br>
+        return true;<br>
+        }<br><br>
+
+        const anagram2 = (a, b) => [...a.toLowerCase()].sort().join() === [...b.toLowerCase()].sort().join();<br>
+    </div>
+    <div>
+        console.log('task4: ' + anagram('friend', 'Finder')); // true<br>
+        console.log('task4: ' + anagram2('hello', 'world')); //false
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        5. Fibonacci. Написать функцию fibonacci(n),<br>
+        которая возвращает n-ый элемент из последовательности fibonacci.<br><br>
+
+        fibonacci(8) // 21
+    </p>
+    <div>
+        function fibonacci(n){<br>
+        const arr = [0, 1];<br>
+        for (let i = 2; i <= n; i++){<br>
+        const prevN = arr[i - 1];<br>
+        const nextN = arr[i - 2];<br>
+        arr.push(prevN + nextN)<br>
+        }<br>
+        return arr[n];<br>
+        }<br><br>
+
+        function fibonacci1(num){<br>
+        let a = 1,<br>
+        b = 1;<br><br>
+
+        for (let i = 3; i <= num; i++){<br>
+        [a, b] = [b, a + b]<br>
+        }<br>
+        return b<br>
+        }<br><br>
+
+        function fibonacci2(num){<br>
+        if (num < 2){<br>
+        return num;<br>
+        }<br>
+        return fibonacci2(num - 1) + fibonacci2(num - 2);<br>
+        }<br>
+    </div>
+    <div>
+        console.log('task5 ' + fibonacci(8)); //21<br>
+        console.log('task5 ' + fibonacci1(10)); //89<br>
+        console.log('task5 ' + fibonacci2(4)); //5
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        6. Class Names. Отсортировать массив,
+        вывести отсортированый по частоте использования массив без повторений<br>
+        let className = ['header', 'menu', 'menu', 'link', 'link', 'footer', 'menu', 'link'];<br><br>
+
+        let res = ['header', 'link', 'menu', 'footer'];
+    </p>
+    <div>
+        let className = ['header', 'menu', 'menu', 'link', 'link', 'footer', 'menu', 'link'];<br><br>
+
+        let count = {};<br><br>
+
+        for (let i = 0; i < className.length; i++){<br>
+        let current = className[i];<br>
+        if (count[current]){<br>
+        count[current] += 1<br>
+        } else {<br>
+        count[current] = 1;<br>
+        }<br>
+        //console.log(count);<br>
+        }<br><br>
+
+        let res = Object.keys(count).sort((a, b) => count[b] - count[a]);
+    </div>
+    <div>
+        console.log('task6: ' + res);
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        7. Currencies. Из массива получить данные по приходу и расходу
+    </p>
+    <div>
+        const input = [<br>
+        ['usa', 'buy', 500],<br>
+        ['usa', 'sell', 200],<br>
+        ['gbr', 'buy', 500],<br>
+        ['usa', 'sell', 1500],<br>
+        ['eur', 'buy', 500],<br>
+        ['uar', 'sell', 500],<br>
+        ];<br><br>
+
+        let result = {};<br><br>
+
+        input.forEach((item)=> {<br><br>
+
+        let [currency, type, amount] = item;<br><br>
+
+        if (!result[currency]){<br>
+        result[currency] = [0, 0];<br>
+        }<br><br>
+
+        result[currency][type === 'buy' ? 0 : 1] +=amount;<br><br>
+
+        });<br>
+
+        let result2 = input.reduce((acc, curr) =>{<br>
+        acc[curr[0]] = acc[curr[0]] || [0, 0];<br>
+        acc[curr[0]][curr[1] === 'buy' ? 0 : 1] += curr[2];<br>
+        return acc;<br>
+        }, {});<br>
+    </div>
+    <div>
+        console.log('task7:');<br>
+        console.log(result);<br>
+        console.log(result2);
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        8. Maze task. Если у данного лабиринта решение
+    </p>
+    <div>
+        let maze = [<br>
+        [1, 1, 1, 0, 0, 1],<br>
+        [1, 1, 1, 1, 0, 1],<br>
+        [0, 0, 0, 0, 0, 0],<br>
+        [0, 1, 1, 1, 1, 1],<br>
+        [0, 0, 0, 0, 0, 0],<br>
+        [1, 1, 1, 1, 1, 0],<br>
+        ];<br><br>
+
+        function checkPath(start, end) {<br>
+        maze[start.y][start.x] = 5;<br><br>
+
+        let sibLings = getValidSib(start);<br>
+        if (sibLings.length > 0){<br>
+        for (let i = 0; i < sibLings.length; i++){<br>
+        let current = sibLings[i];<br><br>
+
+        let isSolved = current.x === end.x && current.y === end.y;<br>
+        let notVisited = maze[current.y][current.x] !== 5;<br><br>
+
+        if (isSolved || (notVisited && checkPath(current, end))){<br>
+        return true;<br>
+        }<br>
+        }<br>
+        }<br>
+        return false;<br><br>
+        <br>
+        }<br><br>
+
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <div>
+        function getValidSib(cord){<br>
+        let {x, y} = cord;<br><br>
+
+        let cords = [];<br><br>
+
+        if (maze[y - 1] !== undefined){<br>
+        cords.push({x: x, y: y-1, val: maze[y-1][x]})<br>
+        }<br>
+        if (maze[y + 1] !== undefined){<br>
+        cords.push({x: x, y: y+1, val: maze[y+1][x]})<br>
+        }<br>
+        if (maze[y][x-1] !== undefined){<br>
+        cords.push({x: x-1, y: y, val: maze[y][x-1]})<br>
+        }<br>
+        if (maze[y][x+1] !== undefined){<br>
+        cords.push({x: x+1, y: y, val: maze[y][x+1]})<br>
+        }<br>
+        return cords.filter(el => el.val === 0);<br>
+        }<br>
+    </div>
+    <div>
+        console.log('task8: ' + checkPath({x: 3, y: 0}, {x: 5, y: 5}));
+    </div>
+    <button id="start">Далее</button>
+</div>
+<div class="apps">
+    <p>
+        9. ATM task. Написать фукцию, где аргумент сумма, и нужно получить колиство купюр.<br>
+        дополнительные условия:<br>
+        - наименьшее количество купюр<br>
+        - нет лимита и сумма минимальная равна минимальной купюре<br>
+        - нет лимита на снятие<br>
+        - нет лимита на купюры<br>
+        - купюры 100, 50, 20, 10<br>
+    </p>
+    <div>
+        function iWantToGet(ammountRequired) {<br>
+        const availableNotes = [100, 50, 20, 10];<br>
+        const result = [];<br><br>
+
+        if (ammountRequired > 0){<br>
+        for (let i = 0; i < availableNotes.length; i++){<br>
+        let note = availableNotes[i];<br><br>
+
+        while (ammountRequired - note >= 0){<br>
+        ammountRequired -= note;<br>
+        result.push(note)<br>
+        }<br>
+        }<br>
+        } else {<br>
+        console.log('enter new ammount')<br>
+        }<br><br>
+
+        return result;<br>
+        }
+    </div>
+    <div>
+        console.log('task9: ' + iWantToGet(370));
+    </div>
+    <button id="start">Далее</button>
+</div>
+
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

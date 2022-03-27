@@ -1,0 +1,114 @@
+:root{
+    --sans-serif: 'Helvetica', Arial, sans-serif;
+    --serif: 'Georgia', Cambria, serif;
+    --color-dark: #111;
+    --color-pink: #555;
+    --bg-fill: #ff0;
+    --text-color: #060130;
+}
+h1, h2, h3, h4, h5{
+    font-family: var(--sans-serif);
+}
+p, ul, li{
+    font-family: var(--serif);
+    background: var(--color-dark);
+}
+.theme-bright{
+    --bg-fill: #ffeaea;
+    --text-color: #060130;
+}
+.theme-dark{
+    --bg-fill: #060130;
+    --text-color: #ffeaea;
+}
+p.switch{
+    background: var(--bg-fill);
+    color: var(--text-color);
+}
+
+
+body{
+    font-family: Open Sans, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+ul,li{
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a, a:hover{
+    text-decoration: none;
+}
+
+*, div, section, span, input, button{
+    box-sizing: border-box;
+}
+
+.apps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    max-height: 150vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    background: linear-gradient(90deg, #29323C 0%, #485563 100%);
+}
+
+.apps.up {
+    margin-top: -100vh;
+}
+
+.apps p {
+    margin: 15px auto;
+    padding: 10px;
+    width: 550px;
+    background: #999;
+    text-align: left;
+}
+
+.apps div {
+    padding: 10px;
+    margin: 15px auto;
+    width: 550px;
+    background: #fff;
+    text-align: left;
+}
+
+.apps button{
+    width: 150px;
+    padding: 8px 15px;
+    background: aqua;
+    color: black;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    z-index: 2;
+}
+
+button:hover{
+    background: red;
+    color: aqua;
+    border: 2px solid red;
+
+}
+
+
